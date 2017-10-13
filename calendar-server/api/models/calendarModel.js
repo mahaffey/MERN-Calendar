@@ -6,9 +6,12 @@ var Schema = mongoose.Schema
 var EntrySchema = new Schema({
   title: {
     type: String,
-    required: 'Please enter name for calendar entry'
+    required: 'Please enter title for calendar entry'
   },
   description: {
+    type: String,
+  },
+  location: {
     type: String,
   },
   is_all_day_event: {
@@ -22,7 +25,7 @@ var EntrySchema = new Schema({
   },
   Created_date: {
     type: Date,
-    default: Date.now
+    default: new Date
   }
 })
 
