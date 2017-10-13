@@ -19,7 +19,7 @@ var EntrySchema = new Schema({
   },
   end_time: {
     type: Date,
-  }
+  },
   Created_date: {
     type: Date,
     default: Date.now
