@@ -40,6 +40,16 @@
 
 }
 
+div[class="row"] {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+div[class^="col-"] {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  /*background-color: #bfbfbf;*/
+}
+
 @media (min-width: 768px){
   .seven-cols .col-md-1,
   .seven-cols .col-sm-1,
