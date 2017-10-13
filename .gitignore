@@ -1,0 +1,37 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+calendar-client/node_modules
+
+calendar-server/node_modules
+
+# testing
+calendar-client/coverage
+
+calendar-server/coverage
+
+# production
+calendar-client/build
+
+calendar-server/build
+
+# misc
+calendar-client/.DS_Store
+calendar-client/.env.local
+calendar-client/.env.development.local
+calendar-client/.env.test.local
+calendar-client/.env.production.local
+
+calendar-client/npm-debug.log*
+calendar-client/yarn-debug.log*
+calendar-client/yarn-error.log*
+
+calendar-server/.DS_Store
+calendar-server/.env.local
+calendar-server/.env.development.local
+calendar-server/.env.test.local
+calendar-server/.env.production.local
+
+calendar-server/npm-debug.log*
+calendar-server/yarn-debug.log*
+calendar-server/yarn-error.log*
