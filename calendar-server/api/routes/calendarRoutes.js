@@ -2,7 +2,7 @@
 
 module.exports = function(app) {
   var calendar = require('../controllers/calendarController')
-}
+
 
 // calendar Routes
 app.route('/')
@@ -13,5 +13,4 @@ app.route('/entries/:entryId')
   .get(calendar.read_an_entry)
   .put(calendar.update_an_entry)
   .delete(calendar.delete_an_entry)
-
 }
