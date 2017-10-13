@@ -1,27 +1,17 @@
 'use strict'
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema
 
+module.exports = function(app) {
+  var calendar = require('../controllers/calendarController')
+}
 
-var ItemSchema = new Schema({
-  title: {
-    type: String,
-    require: 'Please enter name for calendar entry'
-  },
-  description: {
-    type: String,
-  },
-  is_all_day_event: {
-    type: Boolean,
-  },
-  start_time: {
-    type: Date,
-  },
-  end_time: {
-    type: Date,
-  }
-  Created_date: {
-    type: Date,
-    default: Date.now
-  }
-})
+// calendar Routes
+app.route('/')
+  .get(calendar.list_all_entries)
+  .post(calendar.create_an_entry)
+
+app.route('/entries/:entryId')
+  .get(calendar.read_an_entry)
+  .put(calendar.update_an_entry)
+  .delete(calendar.delete_an_entry)
+
+}
