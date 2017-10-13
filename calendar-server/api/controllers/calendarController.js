@@ -1,6 +1,6 @@
 'use strict'
 
-var mongoose = require('mongoose')
+var mongoose = require('mongoose'),
   Entry = mongoose.model('Entries')
 
 exports.list_all_entries = function(req, res) {
@@ -15,6 +15,14 @@ exports.list_all_entries = function(req, res) {
 exports.create_an_entry = function(req, res) {
   var new_entry = new Entry(req.body)
   new_entry.save(function(err, entry) {
+    if (err)
+      res.send(err)
+    res.json(entry)
+  })
+}
+
+exports.read_an_entry = function(req, res) {
+  Entry.findById(req.params.entryId, function(err, entry) {
     if (err)
       res.send(err)
     res.json(entry)

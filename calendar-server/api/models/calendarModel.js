@@ -6,7 +6,7 @@ var Schema = mongoose.Schema
 var EntrySchema = new Schema({
   title: {
     type: String,
-    require: 'Please enter name for calendar entry'
+    required: 'Please enter name for calendar entry'
   },
   description: {
     type: String,
